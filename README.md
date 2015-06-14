@@ -9,18 +9,15 @@ Other:
 Algorithms:
 
 1. vector addition
-2. is prime number
+2. is prime
 3. sum of elements in array
-4. search (unsorted array)
-5. search (sorted array)
-6. matrix multiplication
-7. matrix multiplication (tiled)
-8. prefix sum
-9. image convolution
-10. image processing
-11. list reduction
-12. list scan
-13. real-time animation
+4. search
+5. matrix multiplication
+6. prefix sum
+7. image convolution
+8. image processing
+9. vector reduction
+10. vector scan
 
 Other:
 
