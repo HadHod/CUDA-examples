@@ -9,19 +9,20 @@ Other:
 Algorithms:
 
 1. vector addition
-2. is prime
-3. sum of elements in array
-4. search
-5. matrix multiplication
-6. prefix sum
-7. image convolution
-8. image processing
-9. vector reduction
-10. vector scan
+1. is prime
+1. Matrix Transpose
+1. sum of elements in array
+1. search
+1. matrix multiplication
+1. prefix sum
+1. image convolution
+1. image processing
+1. vector reduction
+1. vector scan
 
 Other:
 
 1. handling CUDA errors
-2. CUDA system info
-3. CUDA tests
-4. outside connection (e.g. socets)
+1. CUDA system info
+1. CUDA tests
+1. outside connection (e.g. socets)
