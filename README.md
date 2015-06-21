@@ -10,7 +10,7 @@ Algorithms:
 
 1. vector addition
 1. is prime
-1. Matrix Transpose
+1. [matrix transpose](http://devblogs.nvidia.com/parallelforall/efficient-matrix-transpose-cuda-cc/)
 1. sum of elements in array
 1. search
 1. matrix multiplication
