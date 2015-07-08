@@ -2,7 +2,7 @@
 #include <string>
 #include <cstdlib>
 
-#include "cuda_pieces/vector_addition/vector_addition.h";
+#include "cuda_pieces/vector_addition/vector_addition.cuh"
 
 using namespace std;
 

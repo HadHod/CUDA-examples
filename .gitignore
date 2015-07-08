@@ -29,5 +29,6 @@
 
 # Other
 Debug/
+Release/
 .project
 .cproject
