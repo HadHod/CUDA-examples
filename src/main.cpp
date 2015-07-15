@@ -3,10 +3,14 @@
 #include <cstdlib>
 
 #include "cuda_pieces/vector_addition/vector_addition.cuh"
+#include "utils/number_generator.h"
 
 using namespace std;
 
 int main(int argc, char **argv) {
+
+    NumberGenerator ng;
+    const int* a = ng.getRandomNumbers(3);
 
     if (argc == 0) {
         cout << "Type one argument:\n";
