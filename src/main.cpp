@@ -9,8 +9,11 @@ using namespace std;
 
 int main(int argc, char **argv) {
 
+    const int DATA_LENGTH = 1000;
+
     NumberGenerator ng;
-    const int* a = ng.getRandomNumbers(3);
+    const int* a = ng.getRandomNumbers(DATA_LENGTH);
+    const int* b = ng.getRandomNumbers(DATA_LENGTH);
 
     if (argc == 0) {
         cout << "Type one argument:\n";
@@ -18,7 +21,7 @@ int main(int argc, char **argv) {
     } else {
         const int option = stoi(argv[1]);
         if (option == 1) {
-            AddVectors();
+            AddVectors(a, b, DATA_LENGTH);
         } else {
             cout << "Wrong value: " << option << "\n";
         }

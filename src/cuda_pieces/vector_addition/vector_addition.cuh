@@ -3,6 +3,6 @@
 
 void AddVectors();
 
-void AddVectors(int*, int*);
+void AddVectors(const int*, const int*, const int);
 
 #endif
