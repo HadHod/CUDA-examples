@@ -35,9 +35,20 @@ void AddVectors(const int* a, const int* b, const int dataLength) {
     const dim3 gridDim((dataLength / threadsPerBlock) + 1, 1, 1);
     const dim3 blockDim(threadsPerBlock, 1, 1);
 
+    cudaEvent_t start, stop;
+    float elapsedTime;
+    cudaEventCreate(&start);
+    cudaEventRecord(start, 0);
+
     vectorAddition_kernel<<<gridDim, blockDim>>>(dev_result, dev_a, dev_b, dataLength);
     gpuErrorCheck( cudaPeekAtLastError() );
     gpuErrorCheck( cudaDeviceSynchronize() );
+
+    cudaEventCreate(&stop);
+    cudaEventRecord(stop, 0);
+    cudaEventSynchronize(stop);
+    cudaEventElapsedTime(&elapsedTime, start, stop);
+    cout << "Elapsed time: " << elapsedTime << " ms\n";
 
     gpuErrorCheck( cudaMemcpy(result, dev_result, MEMORY_SIZE, cudaMemcpyDeviceToHost) );
 
