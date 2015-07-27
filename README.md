@@ -2,13 +2,17 @@
 
 Algorithms:
 
+1. vector addition
+
 Other:
+
+1. handling CUDA errors
+1. random number generator
 
 ### TODO ###
 
 Algorithms:
 
-1. vector addition
 1. is prime
 1. [matrix transpose](http://devblogs.nvidia.com/parallelforall/efficient-matrix-transpose-cuda-cc/)
 1. sum of elements in array
@@ -22,7 +26,6 @@ Algorithms:
 
 Other:
 
-1. handling CUDA errors
 1. CUDA system info
 1. CUDA tests
 1. outside connection (e.g. socets)
