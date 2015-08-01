@@ -3,13 +3,14 @@
 #include <cstdlib>
 
 #include "cuda_pieces/vector_addition/vector_addition.cuh"
+#include "cuda_pieces/is_prime/is_prime.cuh"
 #include "utils/number_generator.h"
 
 using namespace std;
 
 int main(int argc, char **argv) {
 
-    const int DATA_LENGTH = 1000;
+    const int DATA_LENGTH = 1;
 
     NumberGenerator ng;
     const int* a = ng.getRandomNumbers(DATA_LENGTH);
@@ -20,10 +21,10 @@ int main(int argc, char **argv) {
         cout << "1 => vector addition\n";
     } else {
         const int option = stoi(argv[1]);
-        if (option == 1) {
-            AddVectors(a, b, DATA_LENGTH);
-        } else {
-            cout << "Wrong value: " << option << "\n";
+        switch (option) {
+            case 1: AddVectors(a, b, DATA_LENGTH); break;
+            case 2: IsPrime(a[0]); break;
+            default: cout << "Wrong value: " << option << "\n";
         }
     }
 

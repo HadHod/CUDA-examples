@@ -1,0 +1,6 @@
+#ifndef IS_PRIME_CUH_
+#define IS_PRIME_CUH_
+
+void IsPrime(const int);
+
+#endif /* IS_PRIME_CUH_ */
