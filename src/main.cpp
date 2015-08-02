@@ -23,10 +23,13 @@ int main(int argc, char **argv) {
         const int option = stoi(argv[1]);
         switch (option) {
             case 1: AddVectors(a, b, DATA_LENGTH); break;
-            case 2: IsPrime(a[0]); break;
+            case 2: IsPrime(10); break;
             default: cout << "Wrong value: " << option << "\n";
         }
     }
+
+    delete[] a;
+    delete[] b;
 
     return EXIT_SUCCESS;
 }
