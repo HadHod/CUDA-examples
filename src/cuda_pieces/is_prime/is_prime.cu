@@ -8,7 +8,7 @@ using namespace std;
 void IsPrime(int a) {
     int* number = &a;
     int* dev_number;
-    bool* result = malloc(sizeof(bool));
+    bool result = false;
     bool* dev_result;
 
     cudaMalloc((void**) &dev_result, sizeof(bool));
@@ -18,10 +18,10 @@ void IsPrime(int a) {
 
     dim3 dimGrid(1, 1, 1);
     dim3 dimBlock(1, 1, 1);
-    isPrime_kernel<<<dimGrid, dimBlock>>>(result, number);
+    isPrime_kernel<<<dimGrid, dimBlock>>>(*dev_result);
     cudaDeviceSynchronize();
 
-    cudaMemcpy(result, dev_result, sizeof(bool), cudaMemcpyDeviceToHost);
+    cudaMemcpy(&result, dev_result, sizeof(bool), cudaMemcpyDeviceToHost);
 
     cudaFree(dev_result);
     cudaFree(dev_number);
